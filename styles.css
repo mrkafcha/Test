@@ -1,0 +1,67 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    max-width: 1097px;
+    margin: auto;
+}
+
+.square {
+    background-color: red;
+    color: white;
+    display: grid;
+    font-size: 2rem;
+    justify-items : center;
+    align-items : center;
+    aspect-ratio: 1 / 1;
+}
+
+.square-one {
+    grid-column: 1;
+    grid-row: 1;
+}
+.square-two {
+    grid-column: 1;
+    grid-row: 3;
+}
+.square-three {
+    grid-column: 2;
+    grid-row: 2;
+}
+.square-four {
+    grid-column: 2;
+    grid-row: 3;
+}
+.square-five {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.square-six {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+/* Адаптивность для средних экранов */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Сетка из 2 колонок */
+    }
+
+    .square {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+/* Адаптивность для мобильных экранов */
+@media (max-width: 375px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .square {
+        grid-column: span 1;
+        grid-row: auto;
+    }
+}
