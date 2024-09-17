@@ -54,7 +54,7 @@
 /* Адаптивность для средних экранов */
 @media (max-width: 768px) {
     .container {
-        grid-template-columns: repeat(2, 1fr); /* Сетка из 2 колонок */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .square {
